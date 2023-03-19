@@ -10,6 +10,8 @@ a {
     text-decoration: none !important;
 }
 .header {
+    height: 64px;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;

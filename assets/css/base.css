@@ -363,13 +363,6 @@ input:focus .form-field {
   color: white;
 }
 
-/* Mock header */
-header {
-  height: 64px;
-  background-color: white;
-  border-bottom: 1px solid #d3d2d2;
-}
-
 /* Buttons */
 .func-btn {
   font-size: 1.4rem;

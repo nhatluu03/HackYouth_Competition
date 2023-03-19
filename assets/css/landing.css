@@ -1,0 +1,308 @@
+html {
+    box-sizing: border-box;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+
+}
+
+h1, h2, h3, h4 {
+  font-family: "Orbitron", sans-serif;
+
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2.25em;
+}
+
+h4 {
+    font-size: 2em;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+}
+
+body {
+    margin: auto;
+    /* background-image: url("../img/About.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background-color: #100947;
+    /* background-repeat: repeat; */
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    
+
+}
+
+.introduction {
+    display: flex;
+}
+
+.introduction_img {
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+}
+
+.first {
+    justify-content: space-around;
+}
+
+.first h2 {
+    position: relative;
+}
+
+.second {
+    justify-content: center;
+}
+
+.second img {
+    margin-right: 80px;
+    width: 300px;
+}
+
+.third {
+    justify-content: space-evenly;
+    
+}
+
+
+
+.third img{
+    width: 500px;
+}
+
+.fourth {
+    justify-content: flex-start;
+    position: relative;
+    left: 100px;
+}
+
+.fourth .introduction_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.fourth .introduction_content h2 {
+    line-height: 0;
+}
+
+.fourth .introduction_content h2:last-child {
+}
+
+.introduction_content {
+
+}
+
+h2 {
+    
+}
+
+h3 {
+
+}
+
+.introduction_content h3 {
+
+}
+
+.introduction_content h2 {
+
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission_line {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    letter-spacing: 0.2em;
+}
+
+.solution {
+    position: relative;
+}
+
+
+.solution_item {
+    position: relative;
+    left: 40px;
+}
+
+
+.solution_sub_item {
+    position: relative;
+    left: 20px;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.solution_sub_item div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8em;
+    line-height: 1.8em;
+    margin-right: 80px;
+}
+
+
+.solution_sub_item div i{
+    color: yellow;
+    margin-right: 10px;
+}
+
+.solution_item p {
+    position: relative;
+    left: 80px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.summary_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary_img {
+    width: 600px;
+    height: 400px;
+}
+
+.summary h3 {
+
+}
+
+
+.landing {
+    /* background-image: url("../img/landing.webp");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    height: 100vh;
+}
+
+#landing {
+  /* position: fixed; */
+  /* right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0; */
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+#mascot {
+    width: 500px;
+    height: auto;
+    
+}
+
+.landing_mascot {
+    position: relative;
+    /* top: -60vh; */
+    /* left: 48vw; */
+    /* left: calc(50% - 280px); */
+    top: -100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing_mascot h1 {
+    line-height: 1.5em;
+    font-size: 3em;
+}
+
+.landing_mascot h4 {
+    font-size: 1.4em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 50;
+    top: 30px;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+header ul li {
+    margin: 24px 40px;
+      font-family: "Orbitron", sans-serif;
+    font-size: 1.75em;
+
+}
+
+.button a{
+    margin: 24px 40px;
+      font-family: "Orbitron", sans-serif;
+    font-size: 1.75em;
+    color: #100947;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 4px;
+padding: 6px 10px;
+font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+footer {
+    font-size: 2em;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
