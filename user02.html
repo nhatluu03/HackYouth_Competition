@@ -11,7 +11,9 @@
     <!-- CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- css for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css for font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,8 @@
     <link rel="stylesheet" href="./assets/css/headernfooter.css">
     <link rel="stylesheet" href="./assets/css/game.css">
 
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <style>
         #video-container {
             display: flex;
@@ -70,6 +73,29 @@
 
 <body>
     <!-- Header section -->
+    <header>
+        <nav class="hor-nav">
+            <a href="./landing.html" class="brand">
+                <img src="./assets/img/new_logo.png" alt="" class="brand__logo">
+                <span class="brand__name">Illusionist</span>
+            </a>
+            <div class="hor-nav-container mobile-hide">
+                <span style="font-size: 1.4rem; font-weight: 600;">Hi Luu Quoc Nhat</span>
+                <a href="./game.php" class="hor-nav-item open-login-form-btn hide">Login</a>
+            </div>
+            <i class="open-menu-ic fa-solid fa-bars pc-hide" onclick="openMobileNav()"></i>
+            <i class="close-menu-ic fa-solid fa-xmark hide pc-hide" onclick="hideMobileNav()"></i>
+            <div class="mobile-hor-nav-container hide pc-hide">
+                <a href="./index.php" class="mobile-hor-nav-item">Home</a>
+                <a href="./about.php" class="mobile-hor-nav-item">About</a>
+                <a href="./contact.php" class="mobile-hor-nav-item">Contact</a>
+                <a href="./terms.php" class="mobile-hor-nav-item">Terms</a>
+                <a href="./qna.php" class="mobile-hor-nav-item">Q&A</a>
+                <a href="./donor_registration.php" class="mobile-hor-nav-item">Sign up</a>
+            </div>
+        </nav>
+    </header>
+
 
     <div class="container">
         <!-- <div class="row">
@@ -138,12 +164,14 @@
                         <p>
                             <strong>Step 01: </strong>
                             <br>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s
                         </p>
                         <p>
                             <strong>Step 02: </strong>
                             <br>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s
                         </p>
                     </div>
                 </div>
@@ -171,8 +199,10 @@
                 <form class="game__chat-box__form">
                     <input type="text" class="game__chat-box__form-field" placeholder="Enter your message">
                     <!-- <input type="submit" value="Send"> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                     </svg>
                 </form>
                 <i class="fa-solid fa-caret-right minimize-chatbox-ic"></i>
@@ -205,7 +235,7 @@
     </script>
 
     <script>
-        document.querySelector('#localVideo').onclick = function() {
+        document.querySelector('#localVideo').onclick = function () {
 
         }
     </script>
@@ -217,14 +247,14 @@
     </script>
 
     <script>
-        document.querySelector('.minimize-chatbox-ic').onclick = function() {
+        document.querySelector('.minimize-chatbox-ic').onclick = function () {
             document.querySelector('.game__chat-box').style.width = "0%";
             document.querySelector('.game__display').style.width = "100%";
             this.style.display = "none";
             document.querySelector('.expand-chatbox-ic').style.display = "block";
         }
 
-        document.querySelector('.expand-chatbox-ic').onclick = function() {
+        document.querySelector('.expand-chatbox-ic').onclick = function () {
             document.querySelector('.game__chat-box').style.width = "23%";
             document.querySelector('.game__chat-box').style.transition = "0.2s";
             document.querySelector('.game__display').style.width = "77%";
@@ -234,11 +264,11 @@
     </script>
 
     <script>
-        document.querySelector('.question-button').onmouseover = function() {
+        document.querySelector('.question-button').onmouseover = function () {
             document.querySelector('.question-content').style.opacity = "1";
         }
 
-        document.querySelector('.question-button').onmouseout = function() {
+        document.querySelector('.question-button').onmouseout = function () {
             document.querySelector('.question-content').style.opacity = "0";
         }
     </script>
