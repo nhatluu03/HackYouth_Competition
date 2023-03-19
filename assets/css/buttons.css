@@ -1,0 +1,58 @@
+.submit-button {
+    /* width: 120px; */
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    /* margin: 20px; */
+    /* height: 55px; */
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    /* border-radius: 50px; */
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+
+}
+.button-primary {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    /* box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75); */
+    box-shadow: 0 2px 7px 0 rgb(252 104 110 / 75%);
+}
+.submit-button .button-primary{
+    backgrosund-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 2px 7px 0 rgb(252 104 110 / 75%);
+    /* box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75); */
+}
+.submit-button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.submit-button:focus {
+    outline: none;
+}
+
+.admin-button {
+    background-image: linear-gradient(
+        to right,
+        #c1e241,
+        #40e495,
+        #30dd8a,
+        #2bb673
+        );
+        
+    box-shadow: 0 4px 15px 0 rgb(49 196 190 / 75%);}
+
+.citizen-button {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+

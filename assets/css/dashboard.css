@@ -1,0 +1,175 @@
+body {
+    background-color: #f7f7f7;
+    color: var(--text-color);
+}
+
+html {
+    font-size: 62.5%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+ul, li {
+    padding: 0;
+    list-style: none;
+}
+
+main {
+    margin: 100px 60px 0 320px;
+    transition: 0.4s;
+}
+
+header {
+    height: 64px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px dashed #cacaca;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    margin: 40px 0 60px;
+}
+
+/* ChartJS */
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+
+.chart-item.line-chart {
+    width: 55%;
+    align-self: stretch;
+}
+
+.chart-item {
+    background-color: white;
+    border-radius: 8px;    
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 3px 0px;
+    border: 1px solid #efefef;
+    padding: 28px 36px;
+    text-align: center;
+}
+
+.chart-item.pie-chart {
+    width: 40%;
+    align-self: stretch;
+}
+
+.chart-item.pie-chart canvas {
+    display: block;
+    box-sizing: border-box;
+    height: 180px;
+    object-fit: cover;
+    width: 282px;
+}
+
+.chart-item.line-chart {
+}
+
+/* General */
+.db-general {
+
+}
+
+.db-header {
+    margin-bottom: 10px;
+}
+
+.db-header__heading {
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.db-header__ic {
+    padding: 8px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #d8d8d8;
+}
+
+.db-header__ic:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.db-general-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.db-general-item {
+    min-width: 15%;
+    /* width: 20%; */
+    background-color: white;
+    padding: 4px 20px;
+    border-radius: 6px;
+    margin-right: 20px;
+    border: 1px solid #e3e3e3;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 3px 0px;
+    border: 1px solid #efefef;
+}
+
+.db-general-item__title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.db-general-item__number {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: initial;
+    margin-top: 8px;
+}
+
+/* Table */
+.db-table {
+    width: 100%;
+    background-color: white;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    border-collapse: collapse;
+    overflow-x: auto;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 3px 0px;
+    border: 1px solid #efefef;
+    /* color: #1d1d24; */
+}
+
+.db-table tr th {
+    text-align: initial;
+}
+
+.db-table tr {
+    border-bottom: 1px solid #dce4fa;
+}
+
+.db-table tr th,
+.db-table tr td {
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+.db-table tr th {
+    font-weight: 600;
+}
+
+.db-table tr td img {
+    width:40px;
+    height: 40px; 
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.nav__link {
+    font-size: 1.4rem;
+}

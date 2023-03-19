@@ -1,0 +1,261 @@
+.main {
+    background-color: red;
+    margin: 10px 4%;
+    min-height: 87vh;
+    border-radius: 16px;
+    background-color: #050E24;
+}
+
+a {
+    text-decoration: none !important;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+    color: white;
+    background-color: #2C3755;
+    border-radius: 16px 16px 0 0;
+    height: 50px;
+}
+
+.header h1 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.header--left {
+
+}
+
+.header--right button {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#rejectCallButton {
+    background-color: #d52094;
+    border: #d52094;
+    margin-left: 8px;
+}
+
+.header--right i {
+    color: gray;
+    font-size: 1.6rem;
+    margin-left: 16px;
+}
+
+.header--right i:hover {
+    cursor: pointer;
+    color:#38b29f;
+}
+
+/* Game screen display */
+.game {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game__display {
+    width: 79%;
+    position: relative;
+
+}
+
+.game__display__header {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.round-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.round-info h2 {
+    color: white;
+    font-weight: 500;
+}
+
+.round-info__team {
+    padding: 12px;
+
+}
+
+.round-info__team img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.fa-user-plus:before {
+    content: "\f234";
+    color: #D4D4D4;
+    font-size: 1.3rem;
+    margin-right: 8px;
+}
+
+
+.game__chat-box {
+    position: relative;
+    background-color:#272D45;
+    height: calc(87vh - 50px);
+    width: 21%;
+    padding: 18px 12px 22px;
+    border-radius: 0 0 16px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: auto;
+    transition: 0.8s;
+}
+
+.game__chat-box__msg {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game__chat-box__msg img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.game__chat-box__msg p {
+    margin: 0;
+    color: #D4D4D4;
+    background-color: #2C3755;
+    border: 1px solid #28276f;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+
+.game__chat-box__msg.left {
+    justify-content: flex-start;
+    margin-right: 15%;
+}
+
+.game__chat-box__msg.right {
+    flex-direction: row-reverse;
+    margin-left: 15%;
+}
+
+.game__chat-box__msg.left img {
+    margin-right: 12px;
+}
+
+.game__chat-box__msg.right img {
+    margin-left: 12px;
+}
+
+
+.game__chat-box__msg.right p {
+    background-color: #389cb2;
+    color: white;
+}
+
+.game__chat-box__form {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 16px;
+}
+
+.game__chat-box__form-field {
+    background-color: #425280;
+    color: white;
+    width: 90%;
+    border-radius: 4px 0 0 4px;
+    padding: 10px 16px;
+    font-size: 1.3rem;
+}
+
+
+.game__chat-box__form input[type="submit"] {
+    border-radius: 0 4px 4px 0;
+}
+
+.game__chat-box__form  svg  {
+    width: 46px;
+    height: 40px;
+    color: white;
+    background-color: #389cb2;
+    border-radius: 0 4px 4px 0;
+    padding: 6px;
+}
+
+::placeholder {
+    color: #D4D4D4;
+}
+
+
+button {
+    font-size: 1.4rem;
+}
+
+.expand-chatbox-ic,
+.minimize-chatbox-ic {
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    padding: 16px 6px;
+    transform: translate(5%);
+    background-color: #4786d4;
+    border-radius: 0 4px 4px 0;
+
+}
+
+.expand-chatbox-ic,
+.minimize-chatbox-ic:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.question-button {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+}
+
+.question-ic {
+    font-size: 1.4rem;
+    border-radius: 50%;
+}
+
+.question-button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.question-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 1.3rem;
+    padding: 12px 16px;
+    min-height: 300px;
+    position: absolute;
+    width: 250px;
+    max-height: calc(87% - 20px);
+    bottom: 54px;
+    left: 16px;
+    border-radius: 16px 0 16px 0;
+    /* overflow-y: scroll; */
+    opacity: 0;
+    transition: 0.5s;
+}

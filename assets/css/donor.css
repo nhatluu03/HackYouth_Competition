@@ -1,0 +1,63 @@
+.donation-appointment-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 3px 0px;
+  border: 1px solid #efefef;
+  background-color: white;
+  padding: 12px 30px 40px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.donation-appointment-content h4 {
+  font-size: 1.4rem;
+  margin: 6px 0;
+}
+
+.appointment-info-container {
+  width: 46%;
+}
+
+.donation-appointment-content .close-ic {
+  position: absolute;
+  font-size: 1.6rem;
+  top: 12px;
+  right: 23px;
+  color: var(--text-color);
+}
+
+.appointment-info-item {
+}
+
+.appointment-info-item span:first-of-type {
+  margin-right: 8px;
+}
+
+.appointment-note-container {
+  width: 46%;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
+
+@media only screen and (max-width: 739px) {
+  .appointment-info-container,
+  .appointment-note-container {
+    width: 100%;
+  }
+  .appointment-info-container {
+    margin-bottom: 20px;
+  }
+}

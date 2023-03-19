@@ -1,0 +1,64 @@
+.shipping-process {
+  background-color: white;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 30px;
+  padding: 40px 10px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 3px 0px;
+  border: 1px solid #efefef;
+}
+
+.shipping-step {
+  width: 30%;
+  margin-right: 3%;
+  text-align: center;
+}
+
+.shipping-step i {
+  font-size: 1.9rem;
+  color: gray;
+  border: 1.5px dashed gray;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.shipping-step.active i {
+  color: #ea392f;
+  border: 1.5px dashed#ea392f;
+}
+
+.shipping-step p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin: 12px 0;
+}
+
+.shipping-step strong {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
+
+@media only screen and (max-width: 739px) {
+  .shipping-step {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  .shipping-step i {
+    font-size: 1.5rem;
+    padding: 14px;
+  }
+}

@@ -1,0 +1,147 @@
+DROP SCHEMA blood_mana1;
+CREATE SCHEMA blood_mana1;
+USE blood_mana1;
+
+CREATE TABLE blood_group (
+	id VARCHAR(50) NOT NULL,
+    name ENUM("a", "b", "ab", "o") NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE user (
+	id VARCHAR(50) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    created_at DATETIME NOT NULL,
+    phone VARCHAR(10) NULL,
+    email VARCHAR(100) NULL,
+    avatar VARCHAR(150) NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE donor (
+	user_id VARCHAR(50) NOT NULL,
+    blood_group_id VARCHAR(500) NOT NULL,
+    citizen_id VARCHAR(50) NULL,
+    latitude VARCHAR(10) NOT NULL,
+    longitude VARCHAR(10) NOT NULL,
+    birth_date DATETIME NULL,
+    sex ENUM("male", "female", "other") NULL,
+    address TEXT NULL,
+    height INT NULL,
+    weight INT NULL,
+    is_addicted_alcohol ENUM("1", "0") NULL,
+    is_positive_drug ENUM("1", "0") NULL,
+    PRIMARY KEY (user_id),
+    FOREIGN KEY (blood_group_id) REFERENCES blood_group(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
+);
+
+CREATE TABLE hospital (
+    id VARCHAR(50) NOT NULL,
+    name TEXT UNIQUE NOT NULL,
+    address TEXT NOT NULL,
+    hotline VARCHAR(10) NULL,
+    email VARCHAR(100) NULL,
+    latitude VARCHAR(10) NULL,
+	longitude VARCHAR(10) NULL,
+    created_at DATETIME NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE administrative_manager (
+	user_id VARCHAR(50) NOT NULL,
+    hospital_id VARCHAR(50) NOT NULL,
+    PRIMARY KEY (user_id),
+    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE,
+    FOREIGN KEY (hospital_id) REFERENCES hospital(id) ON DELETE CASCADE
+);
+
+CREATE TABLE database_officer (
+	user_id VARCHAR(50) NOT NULL,
+    hospital_id VARCHAR(50) NOT NULL,
+    PRIMARY KEY (user_id),
+    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE,
+    FOREIGN KEY (hospital_id) REFERENCES hospital(id) ON DELETE CASCADE
+);
+
+CREATE TABLE delivery_officer (
+	user_id VARCHAR(50) NOT NULL,
+    hospital_id VARCHAR(50) NOT NULL,
+    PRIMARY KEY (user_id),
+    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE,
+    FOREIGN KEY (hospital_id) REFERENCES hospital(id) ON DELETE CASCADE
+);
+
+CREATE TABLE admin (
+	user_id VARCHAR(50) NOT NULL,
+    created_at DATETIME NOT NULL,
+    PRIMARY KEY (user_id),
+    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
+);
+
+CREATE TABLE request (
+	id VARCHAR(50) NOT NULL,
+    hospital_demand_id VARCHAR(50) NOT NULL,
+    hospital_supply_id VARCHAR(50) NULL,
+	delivery_officer_id VARCHAR(50) NULL,
+    blood_group_id VARCHAR(50) NOT NULL,
+    status ENUM("waiting", "delivering", "delivered") NOT NULL,
+    amount INT NOT NULL,
+    temperature_before INT NULL,
+    temperature_after INT NULL,
+    created_at DATETIME NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (delivery_officer_id) REFERENCES delivery_officer(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (hospital_demand_id) REFERENCES hospital(id) ON DELETE CASCADE,
+    FOREIGN KEY (hospital_supply_id) REFERENCES hospital(id) ON DELETE CASCADE,
+    FOREIGN KEY (blood_group_id) REFERENCES blood_group(id) ON DELETE CASCADE
+);
+
+CREATE TABLE donation_centre (
+	hospital_id VARCHAR(50) NOT NULL,
+	created_at DATETIME NOT NULL,
+    PRIMARY KEY (hospital_id),
+    FOREIGN KEY (hospital_id) REFERENCES hospital(id) ON DELETE CASCADE
+);
+
+CREATE TABLE donation_calendar (
+	id VARCHAR(50) NOT NULL,
+    donation_centre_id VARCHAR(50) NOT NULL,
+    date_time DATETIME NOT NULL,
+    capacity INT NOT NULL,
+    quantity INT NOT NULL,
+    created_at DATETIME NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (donation_centre_id) REFERENCES donation_centre(hospital_id) ON DELETE CASCADE
+);
+
+CREATE TABLE donate (
+	donation_calendar_id VARCHAR(50) NOT NULL,
+    donor_id VARCHAR(50) NOT NULL,
+    amount INT NOT NULL,
+    created_at DATETIME NOT NULL,
+    is_verified ENUM("0", "1"),
+    PRIMARY KEY (donation_calendar_id, donor_id),
+    FOREIGN KEY (donor_id) REFERENCES donor(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (donation_calendar_id) REFERENCES donation_calendar(id) ON DELETE CASCADE
+);
+
+CREATE TABLE store (
+	blood_group_id VARCHAR(50) NOT NULL,
+    hospital_id VARCHAR(50) NOT NULL,
+    amount INT NOT NULL,
+    PRIMARY KEY (blood_group_id, hospital_id),
+    FOREIGN KEY (blood_group_id) REFERENCES blood_group(id) ON DELETE CASCADE,
+    FOREIGN KEY (hospital_id) REFERENCES hospital(id) ON DELETE CASCADE
+);
+
+CREATE TABLE contact (
+	id VARCHAR(50) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    created_at DATETIME NOT NULL,
+    PRIMARY KEY (id)
+);

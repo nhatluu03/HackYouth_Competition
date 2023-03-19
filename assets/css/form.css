@@ -1,0 +1,248 @@
+/* Forms */
+.toggle-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 6px;
+  z-index: 1000000;
+  padding: 28px 36px;
+  min-width: 30%;
+  transition: 0.2s;
+}
+
+.toggle-form .form__extra-msg {
+  margin: 10px 0;
+}
+
+.add-admin-form {
+  width: 30%;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-field__label {
+  width: 20%;
+  margin-bottom: 0;
+}
+
+.form-field__input {
+  width: 70%;
+}
+
+.close-ic {
+  position: absolute;
+  font-size: 1.6rem;
+  top: 24px;
+  right: 36px;
+}
+
+.close-ic:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  margin-top: 8px;
+}
+
+.edit-record-ic {
+  color: #ff6969;
+  margin-right: 5px;
+  font-size: 1.4rem;
+}
+
+.delete-record-ic {
+  color: #fb8672;
+  margin-left: 5px;
+  font-size: 1.4rem;
+}
+
+.edit-record-ic:hover,
+.delete-record-ic:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.open-calendar-form-btn,
+.open-request-form-btn,
+.donate-btn {
+  width: unset;
+  background-color: var(--pink-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 9px 16px;
+  min-width: 120px;
+  border-radius: 4px;
+  box-shadow: 0 2px 7px 0 rgb(252 104 110 / 75%);
+}
+
+.open-calendar-form-btn:hover,
+.open-request-form-btn:hover,
+.donate-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Particular form */
+.login-form {
+  width: 34%;
+  --extra-link-color: var(--orange-color);
+}
+
+.login-form .form-name {
+  margin-bottom: 36px;
+}
+
+.login-form .form__extra-msg {
+  margin: 5px 0;
+}
+
+.login-form .form-field__message {
+  text-align: initial;
+}
+.request-form {
+  min-width: 40%;
+}
+
+.change-password-form {
+  background-color: white;
+  padding: 20px 32px;
+  display: inline-block;
+  box-shadow: rgb(99 99 99 / 20%) 0px 1px 3px 0px;
+  border: 1px solid #efefef;
+  width: 35%;
+}
+
+.change-password-form .form-field__label {
+  width: 25%;
+}
+
+.calendar-form {
+  min-width: 35%;
+}
+
+.confirm-shipping-request-form {
+  width: 40%;
+}
+
+.confirm-shipping-request-form .form-field:last-of-type {
+  display: flex;
+}
+
+.confirm-shipping-request-form .form-field:last-child .form-field__input {
+  width: 45% !important;
+}
+
+.verify-donation-form,
+.edit-donor-form,
+.edit-hospital-form {
+  width: 45%;
+}
+
+.add-staff-btn,
+.accept-request-btn,
+.verify-donation-btn {
+  background-color: var(--pink-color);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 2px 7px 0 rgb(252 104 110 / 75%);
+  text-align: center;
+  min-width: 120px;
+}
+
+.accept-request-btn:hover,
+.verify-donation-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+input[type="submit"].filter-btn {
+  width: unset;
+  min-width: 90px;
+  color: white;
+  background-color: var(--pink-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  margin-top: 0;
+}
+
+.filter-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.filter-form input[type="date"] {
+  background: white;
+  margin: 0 40px 0 10px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 1px 3px 0px;
+  border: 1px solid #efefef;
+}
+
+.delete-calendar-form {
+  max-width: 30%;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .login-form {
+    top: 300px;
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 739px) {
+  .toggle-form {
+    width: 88%;
+  }
+
+  .form-field__label {
+    width: 100% !important;
+  }
+  .form-field__input {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+
+  .form-field__message {
+    margin-left: 0;
+    margin-top: 6px;
+  }
+
+  .health-condition-form .form-field__label {
+    width: 25% !important;
+  }
+  .health-condition-form .form-field__input {
+    width: 50% !important;
+  }
+
+  .login-form .form-name {
+    margin-bottom: 24px;
+  }
+
+  .open-calendar-form-btn, .open-request-form-btn, .donate-btn {
+    padding: 6px 10px;
+    min-width: 100px;
+  }
+}

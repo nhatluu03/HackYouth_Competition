@@ -1,0 +1,10 @@
+.deliver-form > .form-field {
+    color: red;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.deliver-form > .form-field input {
+    width: 30%;
+}
